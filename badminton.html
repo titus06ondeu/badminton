@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirinyaga University Badminton Team</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(270deg, #0f172a, #1a2a4f, #0f172a);
+      background-size: 600% 600%;
+      animation: gradientBG 20s ease infinite;
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Background gradient animation */
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 25px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-size: 60px;
+      font-weight: bold;
+      text-transform: uppercase;
+      z-index: 1;
+      background-clip: text;
+    }
+
+    /* Shimmer effect on header text */
+    header {
+      background: linear-gradient(90deg, #00f6ff, #fff, #00f6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s infinite linear;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -500px 0; }
+      100% { background-position: 500px 0; }
+    }
+
+    header img {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 150px;
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 20px;
+      padding: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .player-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6), 0 0 25px #00f6ff; /* LED glow */
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: floatCard 4s ease-in-out infinite;
+    }
+
+    /* Floating animation */
+    @keyframes floatCard {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .player-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 35px rgba(0,255,255,0.9);
+    }
+
+    .player-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #00f6ff;
+      box-shadow: 0 0 15px #00f6ff;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    /* Zoom effect on hover */
+    .player-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .player-name {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 12px;
+      color: #00f6ff;
+    }
+
+    .player-phone {
+      font-size: 20px;
+      color: #ddd;
+      margin-top: 6px;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 25px;
+      margin-top: 30px;
+      font-size: 25px;
+      line-height: 1.7;
+      z-index: 1;
+      position: relative;
+    }
+
+    /* Watermark */
+    .watermark {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      font-size: 200px;
+      font-weight: bold;
+      color: rgba(0, 255, 255, 0.08); /* faint glow */
+      transform: rotate(-45deg); /* diagonal */
+      transform-origin: bottom left;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .team {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .team {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      header {
+        font-size: 35px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .team {
+        grid-template-columns: 1fr;
+      }
+      header img {
+        height: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Kirinyaga University Badminton Logo">
+    KyU BADMINTON TEAM🏸
+  </header>
+
+ <section class="team">
+    <!-- Keep all player cards -->
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-30 at 18.31.07_f216adc5.jpg" alt="captain">
+      <div class="player-name">Captain Manuh</div>
+      <div class="player-phone">📞 +254 719 295 739</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-30 at 21.05.51_5f571f12.jpg" alt="Player 2">
+      <div class="player-name">Captain Venah</div>
+      <div class="player-phone">📞 +254 725 475 802</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-30 at 18.14.32_2e9d71ed.jpg" alt="Player 3">
+      <div class="player-name">Titus</div>
+      <div class="player-phone">📞 +254 725 475 802</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-30 at 18.49.51_915258da.jpg" alt="Player 4">
+      <div class="player-name">Georgy</div>
+      <div class="player-phone">📞 +254 729 440 931</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-30 at 18.31.07_c8829b00.jpg" alt="Player 5">
+      <div class="player-name">Duncan</div>
+      <div class="player-phone">📞 +254 702 255 315</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-31 at 10.32.56_3b2e6341.jpg" alt="Player 6">
+      <div class="player-name">Pastor Dan</div>
+      <div class="player-phone">📞 +254 795 025 445</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-31 at 10.18.10_fb2cfacb.jpg" alt="Player 7">
+      <div class="player-name">Celestine</div>
+      <div class="player-phone">📞 +254 725 775 317</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-30 at 18.48.14_05a6710c.jpg" alt="Player 8">
+      <div class="player-name">Beatrice</div>
+      <div class="player-phone">📞 +254 704 401 617</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-30 at 19.06.17_b8313b32.jpg" alt="Player 9">
+      <div class="player-name">Klein</div>
+      <div class="player-phone">📞 +254 718 929 366</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-31 at 09.50.26_3a8b7b39.jpg" alt="Player 10">
+      <div class="player-name">Favour</div>
+      <div class="player-phone">📞 +254 758 216 430</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-30 at 20.15.04_c5d9b696.jpg" alt="Player 11">
+      <div class="player-name">Greg</div>
+      <div class="player-phone">📞 +254 740 394 477</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-30 at 21.18.23_1954c889.jpg" alt="Player 12">
+      <div class="player-name">Sarah</div>
+      <div class="player-phone">📞 +254 707 622 258</div>
+    </div>
+
+    <div class="player-card">
+      <img src="images/WhatsApp Image 2025-08-30 at 22.05.13_7edd5c76.jpg" alt="Player 13">
+      <div class="player-name">Sylvester</div>
+      <div class="player-phone">📞 +254 793 6635 505</div>
+    </div>
+
+    <div class="player-card">
+      <img src="player14.jpg" alt="Player 14">
+      <div class="player-name">unknown</div>
+      <div class="player-phone">📞 +254*********</div>
+    </div>
+
+    <div class="player-card">
+      <img src="player15.jpg" alt="Player 15">
+      <div class="player-name">unknown</div>
+      <div class="player-phone">📞 +254*********</div>
+    </div>
+
+    <div class="player-card">
+      <img src="player16.jpg" alt="Player 16">
+      <div class="player-name">unknown</div>
+      <div class="player-phone">📞 +254*********</div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Our Goals & Targets 🎯</strong></p>
+    <p>To nurture talent, build discipline, and represent Kirinyaga University with pride.
+      Our mission is to grow badminton at the university level and compete nationally and internationally with excellence.</p>
+  </footer>
+
+  <!-- Watermark -->
+  <div class="watermark">KyU SHUTTLERS</div>
+</body>
+</html>
